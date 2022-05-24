@@ -1,0 +1,1 @@
+Repositório para implementar um Servidor em Python utilizando sockets().
