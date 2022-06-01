@@ -2,7 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from datetime import datetime
 import time
 
-hostIP = "127.0.0.1"
+hostIP = ""
 porta = 5000
 
 class Servidor(BaseHTTPRequestHandler):
@@ -18,8 +18,8 @@ class Servidor(BaseHTTPRequestHandler):
         self.wfile.write(bytes("</body></html>", "utf-8"))
 
 if __name__ == "__main__":        
-    servidorWeb = HTTPServer((hostIP, serverPort), Servidor)
-    print("Servidor iniciado em %s:%s" % (hostIP, serverPort))
+    servidorWeb = HTTPServer((hostIP, porta), Servidor)
+    print("Servidor iniciado em %s:%s" % (hostIP, porta))
 
     try:
         servidorWeb.serve_forever()
